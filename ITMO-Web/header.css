@@ -1,0 +1,49 @@
+header{
+    background-color: rgb(166, 242, 193);
+    color: black;
+}
+.header_center{
+    display: flex;
+    text-align: center;
+}
+.header_logo{
+    margin: 1rem 1rem 2rem 22rem;
+    
+}
+.header_logo img{
+    width: 10rem;
+    border-radius: 50%;
+}
+.search-text{
+    width: 30rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 0.625rem;
+    font-style: italic;
+    height: 100%;
+}
+.search-box{
+    height: 2.5rem;
+    margin: 2rem 0rem 2rem 12rem;;
+}
+
+.header_nav ul {
+    background-color: white;
+    padding: 0.313rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    line-height: 3.125rem;
+    text-indent: 3.125rem;
+}
+.header_nav a {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+.header_nav a:hover{
+    color:red;
+    font-weight: bold;
+    cursor: pointer;
+}
