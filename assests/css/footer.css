@@ -15,4 +15,5 @@ footer {
     color: black;
     text-align: center;
     line-height: 30px;
+    position: relative;
 }
