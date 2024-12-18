@@ -33,10 +33,10 @@ function showLoginError() {
 }
 
 // Event listener for the sign-in button
-document.getElementById('sign-in-btn').addEventListener('click', function() {
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-
+document.getElementsByClassName('login-btn')[0].addEventListener('click', function() {
+    const email = document.getElementsByClassName('email')[0].value.trim();
+    const password = document.getElementsByClassName('password')[0].value;
+    console.log(email);
     // Check if email and password fields are filled
     if (!email || !password) {
         Swal.fire({
@@ -49,7 +49,7 @@ document.getElementById('sign-in-btn').addEventListener('click', function() {
                 confirmButton: 'btn btn--primary'
             }
         });
-        return; // Exit the function if inputs are invalid
+        return; 
     }
 
     // Fetch saved email and password from localStorage

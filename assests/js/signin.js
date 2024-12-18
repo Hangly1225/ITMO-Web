@@ -17,7 +17,7 @@ function showErrorMessage(message) {
 }
 
 function isValidEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
     return emailPattern.test(email);
 }
 
@@ -26,9 +26,10 @@ function isStrongPassword(password) {
     return password.length >= 6 && /[A-Za-z]/.test(password) && /\d/.test(password);
 }
 
-document.getElementById('sign-up-btn').addEventListener('click', function() {
-    const email = document.getElementById('sign-up-email').value;
-    const password = document.getElementById('sign-up-password').value;
+document.getElementsByClassName('signin-btn')[0].addEventListener('click', function() {
+    const email = document.getElementsByClassName('email')[0].value.trim();
+    const password = document.getElementsByClassName('password')[0].value;
+    console.log('email');
 
     // Validate email and password
     if (!email || !password) {
@@ -44,6 +45,7 @@ document.getElementById('sign-up-btn').addEventListener('click', function() {
     // Save user credentials to localStorage (consider security implications)
     localStorage.setItem('userEmail', email);
     localStorage.setItem('userPassword', password);
+    console.log(localStorage);
 
     showSuccessMessage('You have successfully signed up!');
     document.getElementById('sign-up-modal').style.display = 'none'; 
